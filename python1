@@ -1,0 +1,25 @@
+def genatate_Dic(ll):
+    dic = {}
+    for y in ll:
+        if y in dic:
+            dic[y] = dic[y] + 1
+        else:
+            dic[y] = 1
+    return dic
+
+def frequent(dic):
+    max_value = max(dic.values())
+    ll=[]
+    for x in dic.keys():
+        if dic[x] == max_value:
+            ll.append(x)
+    return ll
+
+
+if __name__ == '__main__':
+    input_paragraph = "Hello world Hello world This world is full of surprises Surprises are everywhere surprises are fun"
+    words2 = input_paragraph.lower().split(" ")
+    d3 = genatate_Dic(words2)
+    print(d3)
+    list=frequent(d3)
+    print("Most Frequent word(s) ", list)
