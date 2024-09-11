@@ -1,0 +1,18 @@
+Question:
+Write a Python function to count the number of vowels (a, e, i, o, u) in a given string.
+Input: "Hello World"
+
+Solution:
+x="hello world"
+vowel='aeiou'
+count=0
+a=0
+for a in range(len(x)):
+    if (
+        x[a] in vowel
+    ):
+        count=count+1
+print(count)
+
+output:
+3
