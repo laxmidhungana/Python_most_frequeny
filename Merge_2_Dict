@@ -1,0 +1,13 @@
+  Question:
+Write a Python function to merge two dictionaries.
+Input: {'a': 1, 'b': 2}, {'b': 3, 'c': 4}
+
+
+Solution:
+   d1 = {'a': 1, 'b': 2}
+    d2 = {'b': 3, 'c': 4}
+    d3 = Merge(d1, d2)
+    print(d3)
+
+Output:
+Output: {'a': 1, 'b': 3, 'c': 4}
