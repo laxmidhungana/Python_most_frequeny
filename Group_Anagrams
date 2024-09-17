@@ -1,0 +1,18 @@
+Group Anagrams Using a Dictionary
+
+Question:
+Write a Python function to group anagrams from a list of words using a dictionary.
+Input: ['eat', 'tea', 'tan', 'ate', 'nat', 'bat']
+
+Solution 1:
+words = ["eat", "tea", "tan", "ate", "nat", "bat"]
+anagrams = []
+for w in words:
+    m = [w2 for w2 in words if set(w2) == set(w)]
+    if m not in anagrams:
+        anagrams += [m]
+print(anagrams)
+
+
+Output: 
+[['eat', 'tea', 'ate'], ['tan', 'nat'], ['bat']]
