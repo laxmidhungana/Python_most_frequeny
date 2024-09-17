@@ -1,0 +1,21 @@
+Question:
+Write a Python function to find the key with the maximum value in a dictionary.
+Input: {'a': 10, 'b': 20, 'c': 5}
+
+Solution1:
+d = {'a': 10, 'b': 20, 'c': 5}
+max_key = 'a'
+for key in d:
+    if d[key] > d[max_key]:
+        max_key = key
+print(max_key)
+
+
+Solution2:
+data = {'a': 10, 'b': 20, 'c': 5}
+value = list(data.values())
+key = list(data.keys())
+print(key[value.index(max(value))])
+
+Output:
+b
