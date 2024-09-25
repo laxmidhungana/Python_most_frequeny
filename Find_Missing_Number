@@ -1,0 +1,35 @@
+Question:
+Given a list of integers from 1 to n with one number missing, find the missing number
+
+Solution1:
+
+def find_missing(lst):
+    max = lst[0]
+    for i in lst:
+        if i > max:
+            max = i
+    min = lst[0]
+    for i in lst:
+        if i < min:
+            min = i
+    list1 = []
+    for num in range(min + 1, max):
+        if num not in lst:
+            list1.append(num)
+    return list1
+lst = [1, 2, 3, 6]
+print(find_missing(lst))
+
+Solution2:
+def find_missing(lst):
+    return set(range(lst[0], lst[-1])) - set(lst)
+lst = [1, 2, 4, 6]
+print(find_missing(lst))
+
+solution3
+def find_missing(nu):
+    start = lst[0]
+    end = lst[-1]
+    return set(range(start, end + 1)).difference(nu)
+number = [1, 2, 4]
+print(find_missing(number))
